@@ -26,13 +26,13 @@ const login = async (body) => {
  * @returns {Promise<{access_token: string, refress_token: string}>} {access_token, refresh_token}
  */
 const refreshToken = async () => {
-  const controller = new AbortController();
+  //   const controller = new AbortController();
   try {
     const refreshToken = TokenServices.getRefreshToken();
     const response = await axios.post(
       TOKEN_REFRESH,
-      JSON.stringify(refreshToken),
-      { signal: controller.signal }
+      JSON.stringify(refreshToken)
+      //   { signal: controller.signal }
     );
     const { access_token, refresh_token } = response.data;
     TokenServices.setAccessToken(access_token);
@@ -41,8 +41,9 @@ const refreshToken = async () => {
     return { access_token, refresh_token };
   } catch (error) {
     console.log("refresh error");
+    throw error;
   }
-  controller.abort();
+  //   controller.abort();
 };
 
 const AuthServices = {
