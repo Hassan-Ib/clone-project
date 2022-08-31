@@ -1,13 +1,39 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Black sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Black Sans";
+  font-styled: "black";
+  font-weight: 900;
+  src: url("./assets/Fonts/black-sans/blacksansblackwebfont.otf");
+}
+@font-face {
+  font-family: "Black Sans";
+  font-styled: "bold";
+  font-weight: 700;
+  src: url("./assets/Fonts/black-sans/blacksansboldwebfont949ef363c646d9c2456af9d67a94778f.otf");
+}
+@font-face {
+  font-family: "Black Sans";
+  font-styled: "regular";
+  font-weight: 400;
+  src: url("./assets/Fonts/black-sans/blacksansregularwebfontd6761cbf250866e8870d97f03fa629a8.otf");
+}
+@font-face {
+  font-family: "Black Sans";
+  font-styled: "light";
+  font-weight: 300;
+  src: url("./assets/Fonts/black-sans/blacksanslightwebfont.otf");
 }
